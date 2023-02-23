@@ -19,3 +19,4 @@ print "Words: $word_count\n";
 print "Bytes: $byte_count\n";
 
 close($fh);
+

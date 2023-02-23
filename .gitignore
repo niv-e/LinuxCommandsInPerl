@@ -1,0 +1,8 @@
+/.vscode/
+/.idea/
+/python_gui/.idea/
+/python_gui/bin/
+/python_gui/lib/
+/python_gui/pyvenv.cfg
+/temp/
+/uiToPy/

@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1107</width>
+    <height>732</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>100</y>
+     <width>921</width>
+     <height>500</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="labelBackground">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>900</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(59, 64, 69, 1);
+border-radius:10px
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>40</y>
+      <width>271</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_terminal">
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="labelTerminal">
+       <property name="font">
+        <font>
+         <family>Orbitron</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Terminal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="textBrowser_terminal">
+       <property name="styleSheet">
+        <string notr="true">	border-radius:10px;
+	border: 1px solid #000000;
+	background: #D9D9D9;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_clear">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton{
+	background-color:rgba(85,98,112,255);
+	color:rgba(255,255,255,200);
+	border-radius:2px;
+}
+QPushButton#pushButton:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(255,107,107,255);
+	background-position:calc(100% - 10px)center;
+}
+QPushButton#pushButton:hover{
+	background-color:rgba(255,107,107,255);
+}</string>
+       </property>
+       <property name="text">
+        <string>Clear</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget_commands_buttons">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>69</y>
+      <width>181</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_shell">
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>10</y>
+        <width>161</width>
+        <height>382</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_Shell_commands">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinimumSize</enum>
+       </property>
+       <property name="bottomMargin">
+        <number>200</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="pushButton_ls">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#pushButton_ls{
+	background-color:rgba(150,150,150,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_ls:pressed{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_ls:hover{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}</string>
+         </property>
+         <property name="text">
+          <string>ls</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_mkdir">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#pushButton_mkdir{
+	background-color:rgba(150,150,150,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_mkdir:pressed{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_mkdir:hover{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}</string>
+         </property>
+         <property name="text">
+          <string>mkdir</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_mv">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#pushButton_mv{
+	background-color:rgba(150,150,150,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_mv:pressed{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_mv:hover{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}</string>
+         </property>
+         <property name="text">
+          <string>mv</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_tail">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#pushButton_tail{
+	background-color:rgba(150,150,150,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_tail:pressed{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_tail:hover{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}</string>
+         </property>
+         <property name="text">
+          <string>tail</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_wc">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#pushButton_wc{
+	background-color:rgba(150,150,150,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_wc:pressed{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_wc:hover{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}</string>
+         </property>
+         <property name="text">
+          <string>wc</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_admin">
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>161</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_Shell_commands_2">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetNoConstraint</enum>
+       </property>
+       <property name="bottomMargin">
+        <number>280</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="pushButton_adduser">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#pushButton_adduser{
+	background-color:rgba(150,150,150,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+
+}
+QPushButton#pushButton_adduser:pressed{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_adduser:hover{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}</string>
+         </property>
+         <property name="text">
+          <string>add user</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_addgroup">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#pushButton_addgroup{
+	background-color:rgba(150,150,150,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_addgroup:pressed{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_addgroup:hover{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}</string>
+         </property>
+         <property name="text">
+          <string>add group</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_changepass">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#pushButton_changepass{
+	background-color:rgba(150,150,150,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+
+}
+QPushButton#pushButton_changepass:pressed{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_changepass:hover{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}</string>
+         </property>
+         <property name="text">
+          <string>change password</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_system">
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>161</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_Shell_commands_4">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinimumSize</enum>
+       </property>
+       <property name="bottomMargin">
+        <number>280</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="pushButton_kill">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#pushButton_kill{
+	background-color:rgba(150,150,150,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_kill:pressed{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_kill:hover{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}</string>
+         </property>
+         <property name="text">
+          <string>kill</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_ps">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#pushButton_ps{
+	background-color:rgba(150,150,150,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_ps:pressed{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_ps:hover{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}</string>
+         </property>
+         <property name="text">
+          <string>ps</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_whoami">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#pushButton_whoami{
+	background-color:rgba(150,150,150,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_whoami:pressed{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}
+QPushButton#pushButton_whoami:hover{
+    font-weight: bold;
+	background-color:rgba(125,125,125,1);
+	color:rgba(1,1,1,1);
+	border-color:rgba(1,1,1,1);
+}</string>
+         </property>
+         <property name="text">
+          <string>whoami</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget_commands">
+    <property name="geometry">
+     <rect>
+      <x>219</x>
+      <y>70</y>
+      <width>391</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_ls">
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>351</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_src_2">
+         <property name="text">
+          <string>Select dir</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_ls"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pushButton_ls_browse_">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_ls_exe">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>350</y>
+        <width>290</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Execute</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_ls">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>140</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>ls</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ls -a</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ls -l</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ls -r</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_ls">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>110</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Choose How to run file:</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_mkdir">
+     <widget class="QWidget" name="gridLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>351</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_src_5">
+         <property name="text">
+          <string>Select dir location</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pushButton_mkdir_browse">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_mkdir"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Dir name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_dirname"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_mkdir_exe">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>350</y>
+        <width>290</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Execute</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_mv">
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>351</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_src">
+         <property name="text">
+          <string>Select File</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_mv_dest"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pushButton_mv_dest">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pushButton_mv_src">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_dest">
+         <property name="text">
+          <string>Destination</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_mv_src"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_mv_exe">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>350</y>
+        <width>290</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Execute</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_tail">
+     <widget class="QWidget" name="gridLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>351</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_src_6">
+         <property name="text">
+          <string>Select dir</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_tail"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pushButton_tail_browse">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_tail_exe">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>350</y>
+        <width>290</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Execute</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_wc">
+     <widget class="QWidget" name="gridLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>351</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_7">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_src_7">
+         <property name="text">
+          <string>Select file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_src_wc"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pushButton_wc_browse_">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_wc_exe">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>350</y>
+        <width>290</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Execute</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_kill">
+     <widget class="QWidget" name="gridLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>351</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_src_8">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>          PID       </string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_src_kill"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pushButton_kill_exc">
+         <property name="text">
+          <string>Kill</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_black"/>
+   </widget>
+   <widget class="QLabel" name="lable_left_section">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>70</y>
+      <width>181</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(217, 217, 217, 1);
+border-radius:10px
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lable_center_section">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>70</y>
+      <width>391</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(217, 217, 217, 1);
+border-radius:10px
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_exit">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>20</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#pushButton_exit{
+	background-color:rgba(0,0,0,0);
+	color:rgba(1,1,1,1);
+	font: 10pt &quot;3DS Fonticon CID&quot;;
+}
+QPushButton#pushButton_exit:pressed{
+	font: 10pt &quot;3DS Fonticon CID&quot;;
+    font-weight: bold;
+	background-color:rgba(0,0,0,0);
+	color:rgba(255, 87, 51,1);
+	padding-left:5px;
+	padding-top:5px;
+	background-position:calc(100% - 10px)center;
+}
+QPushButton#pushButton_exit:hover{
+    font-weight: bold;
+	background-color:rgba(0,0,0,0);
+	color:rgba(255, 87, 51,1);
+	font: 10pt &quot;3DS Fonticon CID&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string></string>
+    </property>
+   </widget>
+   <zorder>labelBackground</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>lable_left_section</zorder>
+   <zorder>lable_center_section</zorder>
+   <zorder>stackedWidget_commands_buttons</zorder>
+   <zorder>stackedWidget_commands</zorder>
+   <zorder>pushButton_exit</zorder>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>60</y>
+     <width>501</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(88, 111, 134, 1);
+border-radius:10px
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>60</y>
+     <width>485</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButtonShell">
+      <property name="font">
+       <font>
+        <family>Orbitron</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#pushButtonShell{
+	background-color:rgba(0,0,0,0);
+	color:rgba(255,255,255,200);
+}
+QPushButton#pushButtonShell:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(0,0,0,0);
+	background-position:calc(100% - 10px)center;
+	color:rgba(1,1,1,1);
+    font-weight: bold;
+
+
+}
+QPushButton#pushButtonShell:hover{
+	color:rgba(1,1,1,1);
+    font-weight: bold;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Shell Commands</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButtonAdmin">
+      <property name="font">
+       <font>
+        <family>Orbitron</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#pushButtonAdmin{
+	background-color:rgba(0,0,0,0);
+	color:rgba(255,255,255,200);
+}
+QPushButton#pushButtonAdmin:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(0,0,0,0);
+	background-position:calc(100% - 10px)center;
+	color:rgba(1,1,1,1);
+    font-weight: bold;
+
+
+}
+QPushButton#pushButtonAdmin:hover{
+	color:rgba(1,1,1,1);
+    font-weight: bold;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Admin Commands</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButtonSystem">
+      <property name="font">
+       <font>
+        <family>Orbitron</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#pushButtonSystem{
+	background-color:rgba(0,0,0,0);
+	color:rgba(255,255,255,200);
+}
+QPushButton#pushButtonSystem:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(0,0,0,0);
+	background-position:calc(100% - 10px)center;
+	color:rgba(1,1,1,1);
+    font-weight: bold;
+
+
+}
+QPushButton#pushButtonSystem:hover{
+	color:rgba(1,1,1,1);
+    font-weight: bold;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>System Commands</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>widget</zorder>
+  <zorder>horizontalLayoutWidget</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

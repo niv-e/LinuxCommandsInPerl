@@ -39,6 +39,11 @@ if($options =~ '-l'){
     exit 0;
 }
 
+if($options =~ '-r'){
+    print_with_reverseOrder($dirPath, @files);
+    exit 0;
+}
+
 closedir($dirhandler);
 
 
@@ -107,9 +112,13 @@ sub print_with_longFormat{
     }
 }
 
+sub print_with_reverseOrder{
 
+my @files = reverse <*>;
 
+print "$_ " for @files;
 
+}
 
 
 sub parse_options{
